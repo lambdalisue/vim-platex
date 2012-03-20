@@ -13,8 +13,8 @@ function! s:CompletionCompileCommands(ArgLead, CmdLine, CusorPos)
   return l:lst[0:10]
 endfunction
 
-nnoremap <Plug>(platex_suite_compile) :call platex_suite#Compile("")
-nnoremap <Plug>(platex_suite_preview) :call platex_suite#Preview("")
+nnoremap <Plug>(platex_suite_compile) :call platex_suite#Compile()
+nnoremap <Plug>(platex_suite_preview) :call platex_suite#Preview()
 
 if !hasmapto('<Plug>(platex_suite_preview)', 'n')
   nmap <F12> <Plug>(platex_suite_preview)<CR>
