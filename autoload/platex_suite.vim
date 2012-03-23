@@ -1,7 +1,11 @@
 let s:save_cpo = &cpo
 set cpo&vim
 
-    
+function! platex_suite#Clean()
+  let makefile = g:platex_suite_makefile
+  exec ":!make clean -f " . makefile
+endfunction
+
 function! platex_suite#Compile(...)
   let filename = a:0 ? a:1 : g:platex_suite_main_file
   let filename = expand(filename)

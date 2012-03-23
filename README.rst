@@ -50,6 +50,15 @@ Vundleとか使うの推奨してます。そうじゃないなら全部を突�
 -   ``Preview <file>`` で特定ファイルをコンパイル後プレビューします
     ``<file>`` 省略すると ``g:platex_suite_main_file`` の値が使われます。
 
+えふえーきゅー
+==============
+
+コンパイル出来ない
+    filetypeがplaintexになってませんか？filetypeはtexです
+
+        set FileType plaintex set ft=tex
+
+
 設定
 ====
 

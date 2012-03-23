@@ -4,6 +4,7 @@ command! -complete=customlist,s:CompletionCompileCommands -nargs=? -range=%
       \ Preview :call platex_suite#Preview(<f-args>)
 command! -complete=customlist,s:CompletionCompileCommands -nargs=? -range=%
       \ Compile :call platex_suite#Compile(<f-args>)
+command! -nargs=0 -range=% Clean :call platex_suite#Clean()
 function! s:CompletionCompileCommands(ArgLead, CmdLine, CusorPos)
   let l:cmd = split(a:CmdLine)
   let l:arg = get(l:cmd, 1, '')
@@ -13,6 +14,7 @@ function! s:CompletionCompileCommands(ArgLead, CmdLine, CusorPos)
   return l:lst[0:10]
 endfunction
 
+nnoremap <Plug>(platex_suite_clean) :call platex_suite#Clean()
 nnoremap <Plug>(platex_suite_compile) :call platex_suite#Compile()
 nnoremap <Plug>(platex_suite_preview) :call platex_suite#Preview()
 

@@ -25,7 +25,7 @@ endif
 # ---------------------------------------------------------------------
 .SUFFIXES: .tex .dvi .aux .log .toc .lof .lot .pdf .ps .bbl .bib .blg
 
-all:    pdf clean
+all:    pdf
 pdf:    $(FILE).pdf
 dvi:    $(FILE).dvi
 bbl:    $(FILE).bbl
